@@ -1,7 +1,7 @@
 class Worker:
     name = ""
     salary = 0.0
-    def __init__(self, name, salary):
+    def __init__(self, name = "John", salary = 1000):
         self.name = name
         self.salary = salary
     def raiseSalary(self):
