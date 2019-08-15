@@ -10,11 +10,11 @@ class Worker:
 print("\n***Create Worker***")
 name = input("Insert name: ")
 salary = float(input("Insert salary: "))
-john = Worker(name, salary)
+worker = Worker(name, salary)
 
 print("\n***Raising salary by 10%***")
-john.raiseSalary()
+worker.raiseSalary()
 
 print('\n***Worker***')
-print('Name: {}'.format(john.name))
-print('Salary: {}'.format(john.salary))
+print('Name: {}'.format(worker.name))
+print('Salary: {}'.format(worker.salary))
