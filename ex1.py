@@ -1,7 +1,17 @@
+# Initialize variables
 numbers = []
+average = 0.0
 
+# Get values
 for i in range(3):
-    numbers.append(input("Digite o valor {}: ".format(i + 1)))
+    numbers.append(float(input("Enter value {}: ".format(i + 1))))
 
+# Sum up everything
 for number in numbers:
-    print("Número {}: {}".format(number, number))
+    average += number
+
+# Get average
+average /= len(numbers)
+
+# Show average
+print("Average: {}".format(average))
