@@ -6,8 +6,8 @@ class Worker:
         self.name = name
         self.salary = salary
 
-    def raiseSalary(self):
-        self.salary *= 1.10
+    def raise_salary(self, percent=10.0):
+        self.salary = self.salary * (1 + percent / 100)
 
 
 print("\n***Create Worker***")
@@ -15,8 +15,11 @@ name = input("Insert name: ")
 salary = float(input("Insert salary: "))
 worker = Worker(name, salary)
 
-print("\n***Raising salary by 10%***")
-worker.raiseSalary()
+print("\n***Raise salary***")
+if (input("Do you want to raise salary? [Y/n] ").upper() == "Y"):
+    new_salary = float(input("Enter desired increase in percentage (i.e. 10): "))
+    print("\n***Raising salary by {}%***".format(new_salary))
+    worker.raise_salary(new_salary)
 
 print("\n***Worker***")
 print("Name: {}".format(worker.name))
