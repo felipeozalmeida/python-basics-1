@@ -10,7 +10,7 @@ elif (number_of_installments == 5):
     total = debt * 1.20
 else:
     print("Invalid value!")
-    pass
+    exit()
 
 installment = total / number_of_installments
 print("\n***Result***")
